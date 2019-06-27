@@ -11,10 +11,37 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+:root {
+  --gatsby-color: #754991;
+}
+
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+}
+
+body {
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+section {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -150px;
+}
+
+.gatsby-text {
+  color: var(--gatsby-color);
+}
+
+#logo {
+  width: 300px;
 }
 
 /*
@@ -171,7 +198,7 @@ textarea {
 
 .clearfix:before,
 .clearfix:after {
-  content: " ";
+  content: ' ';
   /* 1 */
   display: table;
   /* 2 */
@@ -220,18 +247,18 @@ textarea {
     text-decoration: underline;
   }
   a[href]:after {
-    content: " (" attr(href) ")";
+    content: ' (' attr(href) ')';
   }
   abbr[title]:after {
-    content: " (" attr(title) ")";
+    content: ' (' attr(title) ')';
   }
   /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
   }
   pre {
     white-space: pre-wrap !important;
@@ -263,4 +290,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
