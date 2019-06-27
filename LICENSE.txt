@@ -1,0 +1,3 @@
+Copyright (c) MIT
+
+Gatsby NYC Meetup.
